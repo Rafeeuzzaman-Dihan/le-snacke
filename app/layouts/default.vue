@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <main class="mx-auto">
+    <main class="mx-auto max-w-full">
       <slot />
     </main>
 </template>
