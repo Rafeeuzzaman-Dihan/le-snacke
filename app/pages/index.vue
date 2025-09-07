@@ -1,3 +1,10 @@
+<script setup lang="ts">
+
+import HeroSection from "~/pages/hero/heroSection.vue";
+</script>
+
 <template>
-  <h1 class="text-blue-500">Hello World</h1>
+  <div>
+    <hero-section />
+  </div>
 </template>
