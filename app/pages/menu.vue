@@ -103,9 +103,9 @@ const selectCategory = (category) => activeCategory.value = category
       >
         <div class="flex justify-between items-start">
           <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
-          <p class="text-amber-400 font-medium">{{ item.price }}</p>
+          <p class="text-[#FEF1D8] font-medium">{{ item.price }}</p>
         </div>
-        <p class="text-gray-500 mt-1 line-clamp-2">{{ item.description }}</p>
+        <p class="text-[#FEF1D8] mt-1 line-clamp-2">{{ item.description }}</p>
       </div>
     </div>
 
