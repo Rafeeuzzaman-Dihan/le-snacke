@@ -6,7 +6,5 @@ import HeroSection from "~/pages/hero/heroSection.vue";
 <template>
   <div>
     <hero-section />
-    <hero-section />
-    <hero-section />
   </div>
 </template>
