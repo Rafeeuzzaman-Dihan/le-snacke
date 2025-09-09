@@ -1,0 +1,125 @@
+<script setup>
+import { ref } from 'vue'
+
+// Categories
+const categories = [
+  'Burgers',
+  'Pizza',
+  'Desserts',
+  'Drinks',
+  'Starters',
+  'Specials',
+  'Healthy',
+  'Favorites',
+  'Combos'
+]
+
+// Dummy menu items with circular images
+const menuItems = {
+  Burgers: [
+    { name: 'Classic Burger', price: '$5.99', description: 'A delicious classic burger with fresh lettuce, tomato, and cheese.', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1200&q=80' },
+    { name: 'Cheese Burger', price: '$6.99', description: 'Juicy beef patty topped with melted cheddar cheese.', image: 'https://loremflickr.com/100/100/cheeseburger' },
+    { name: 'Bacon Burger', price: '$7.99', description: 'Crispy bacon, fresh veggies, and our special sauce.', image: 'https://loremflickr.com/100/100/baconburger' },
+    { name: 'Veggie Burger', price: '$5.49', description: 'Grilled veggie patty with fresh salad.', image: 'https://loremflickr.com/100/100/veggieburger' },
+    { name: 'Double Patty', price: '$8.99', description: 'Two juicy beef patties with double cheese.', image: 'https://loremflickr.com/100/100/doubleburger' }
+  ],
+  Pizza: [
+    { name: 'Margherita', price: '$8.99', description: 'Classic pizza with tomato sauce, mozzarella, and basil.', image: 'https://loremflickr.com/100/100/pizza' },
+    { name: 'Pepperoni', price: '$9.99', description: 'Loaded with pepperoni slices and extra cheese.', image: 'https://loremflickr.com/100/100/pepperoni' },
+    { name: 'Veggie Pizza', price: '$9.49', description: 'Fresh vegetables and mozzarella cheese.', image: 'https://loremflickr.com/100/100/veggiepizza' },
+    { name: 'BBQ Chicken', price: '$10.99', description: 'BBQ sauce, chicken pieces, and cheese.', image: 'https://loremflickr.com/100/100/bbqpizza' }
+  ],
+  Desserts: [
+    { name: 'Chocolate Cake', price: '$4.99', description: 'Rich chocolate cake with fudge icing.', image: 'https://loremflickr.com/100/100/chocolatecake' },
+    { name: 'Ice Cream', price: '$3.99', description: 'Creamy ice cream in multiple flavors.', image: 'https://loremflickr.com/100/100/icecream' },
+    { name: 'Cheesecake', price: '$5.49', description: 'Classic cheesecake with a buttery crust.', image: 'https://loremflickr.com/100/100/cheesecake' },
+    { name: 'Brownie', price: '$3.49', description: 'Chocolate brownie with nuts.', image: 'https://loremflickr.com/100/100/brownie' }
+  ],
+  Drinks: [
+    { name: 'Coca Cola', price: '$1.99', description: 'Chilled soft drink.', image: 'https://loremflickr.com/100/100/coke' },
+    { name: 'Orange Juice', price: '$2.49', description: 'Freshly squeezed orange juice.', image: 'https://loremflickr.com/100/100/orangejuice' },
+    { name: 'Lemonade', price: '$1.99', description: 'Refreshing lemonade.', image: 'https://loremflickr.com/100/100/lemonade' },
+    { name: 'Iced Tea', price: '$2.29', description: 'Cold brewed iced tea.', image: 'https://loremflickr.com/100/100/icedtea' }
+  ],
+  Starters: [
+    { name: 'French Fries', price: '$2.99', description: 'Crispy golden fries.', image: 'https://loremflickr.com/100/100/fries' },
+    { name: 'Chicken Wings', price: '$5.99', description: 'Spicy grilled chicken wings.', image: 'https://loremflickr.com/100/100/chickenwings' },
+    { name: 'Spring Rolls', price: '$4.49', description: 'Crispy veggie spring rolls.', image: 'https://loremflickr.com/100/100/springrolls' },
+    { name: 'Garlic Bread', price: '$3.49', description: 'Toasted garlic bread.', image: 'https://loremflickr.com/100/100/garlicbread' }
+  ],
+  Specials: [
+    { name: 'Chef Special Pasta', price: '$9.99', description: 'Pasta with special chef sauce.', image: 'https://loremflickr.com/100/100/pasta' },
+    { name: 'Seafood Platter', price: '$14.99', description: 'Assorted seafood with dips.', image: 'https://loremflickr.com/100/100/seafood' },
+    { name: 'Steak', price: '$12.99', description: 'Grilled steak cooked to perfection.', image: 'https://loremflickr.com/100/100/steak' },
+    { name: 'Grilled Salmon', price: '$13.99', description: 'Fresh salmon with herbs.', image: 'https://loremflickr.com/100/100/salmon' }
+  ],
+  Healthy: [
+    { name: 'Caesar Salad', price: '$5.99', description: 'Crispy lettuce with Caesar dressing.', image: 'https://loremflickr.com/100/100/salad' },
+    { name: 'Fruit Bowl', price: '$4.99', description: 'Seasonal fresh fruits.', image: 'https://loremflickr.com/100/100/fruits' },
+    { name: 'Grilled Chicken Salad', price: '$7.49', description: 'Grilled chicken with greens.', image: 'https://loremflickr.com/100/100/chickensalad' },
+    { name: 'Quinoa Bowl', price: '$6.99', description: 'Healthy quinoa with veggies.', image: 'https://loremflickr.com/100/100/quinoa' }
+  ],
+  Favorites: [
+    { name: 'Burger Combo', price: '$8.99', description: 'Classic burger with fries and drink.', image: 'https://loremflickr.com/100/100/burgercombo' },
+    { name: 'Pizza Combo', price: '$11.99', description: 'Medium pizza with drink.', image: 'https://loremflickr.com/100/100/pizzacombo' },
+    { name: 'Dessert Platter', price: '$9.49', description: 'Assorted desserts for sharing.', image: 'https://loremflickr.com/100/100/dessertplatter' }
+  ],
+  Combos: [
+    { name: 'Family Combo', price: '$19.99', description: '2 pizzas, 4 drinks, and 1 dessert.', image: 'https://loremflickr.com/100/100/familymeal' },
+    { name: 'Couple Combo', price: '$12.99', description: '1 pizza, 2 drinks, and 1 dessert.', image: 'https://loremflickr.com/100/100/couplemeal' },
+    { name: 'Snack Combo', price: '$7.99', description: 'Fries, nuggets, and soft drink.', image: 'https://loremflickr.com/100/100/snackcombo' }
+  ]
+}
+
+const activeCategory = ref('Burgers')
+const selectCategory = (category) => activeCategory.value = category
+</script>
+
+<template>
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-6 justify-center mb-12 border-b border-gray-200 pb-4">
+      <button
+          v-for="cat in categories"
+          :key="cat"
+          @click="selectCategory(cat)"
+          class="relative px-3 py-1 font-semibold transition-colors group"
+          :class="activeCategory === cat ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500'"
+      >
+        {{ cat }}
+        <span
+            class="absolute left-0 -bottom-1 h-1 bg-blue-600 transition-all duration-300"
+            :class="activeCategory === cat ? 'w-full' : 'w-0 group-hover:w-full'"
+        ></span>
+      </button>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="flex flex-col gap-6">
+      <div
+          v-for="item in menuItems[activeCategory]"
+          :key="item.name"
+          class="flex items-start gap-4"
+      >
+        <img :src="item.image" alt="" class="w-24 h-24 object-cover rounded-full flex-shrink-0">
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
+            <p class="text-gray-600 font-medium">{{ item.price }}</p>
+          </div>
+          <p class="text-gray-500 mt-1 line-clamp-2">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</template>
+
+<style scoped>
+button {
+  position: relative;
+}
+button span { width: 0; }
+button:hover span { width: 100%; }
+</style>
