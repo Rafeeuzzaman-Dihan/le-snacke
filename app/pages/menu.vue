@@ -14,7 +14,6 @@ const categories = [
   'Combos'
 ]
 
-// Dummy menu items with circular images
 const menuItems = {
   Burgers: [
     { name: 'Classic Burger', price: '$5.99', description: 'A delicious classic burger with fresh lettuce, tomato, and cheese.', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1200&q=80' },
@@ -84,12 +83,12 @@ const selectCategory = (category) => activeCategory.value = category
           v-for="cat in categories"
           :key="cat"
           @click="selectCategory(cat)"
-          class="relative px-3 py-1 font-semibold transition-colors group"
-          :class="activeCategory === cat ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500'"
+          class="relative px-3 py-1 text-[18px] font-800 transition-colors group"
+          :class="activeCategory === cat ? 'text-[#FEF1D8]' : 'text-gray-700 hover:text-[#FEF1D8]'"
       >
         {{ cat }}
         <span
-            class="absolute left-0 -bottom-1 h-1 bg-blue-600 transition-all duration-300"
+            class="absolute left-0 -bottom-1 h-1 bg-[#FEF1D8] transition-all duration-300"
             :class="activeCategory === cat ? 'w-full' : 'w-0 group-hover:w-full'"
         ></span>
       </button>
