@@ -16,57 +16,57 @@ const categories = [
 
 const menuItems = {
   Burgers: [
-    { name: 'Classic Burger', price: '$5.99', description: 'A delicious classic burger with fresh lettuce, tomato, and cheese.', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1200&q=80' },
-    { name: 'Cheese Burger', price: '$6.99', description: 'Juicy beef patty topped with melted cheddar cheese.', image: 'https://loremflickr.com/100/100/cheeseburger' },
-    { name: 'Bacon Burger', price: '$7.99', description: 'Crispy bacon, fresh veggies, and our special sauce.', image: 'https://loremflickr.com/100/100/baconburger' },
-    { name: 'Veggie Burger', price: '$5.49', description: 'Grilled veggie patty with fresh salad.', image: 'https://loremflickr.com/100/100/veggieburger' },
-    { name: 'Double Patty', price: '$8.99', description: 'Two juicy beef patties with double cheese.', image: 'https://loremflickr.com/100/100/doubleburger' }
+    { name: 'Classic Burger', price: '$5.99', description: 'A delicious classic burger with fresh lettuce, tomato, and cheese.' },
+    { name: 'Cheese Burger', price: '$6.99', description: 'Juicy beef patty topped with melted cheddar cheese.' },
+    { name: 'Bacon Burger', price: '$7.99', description: 'Crispy bacon, fresh veggies, and our special sauce.' },
+    { name: 'Veggie Burger', price: '$5.49', description: 'Grilled veggie patty with fresh salad.' },
+    { name: 'Double Patty', price: '$8.99', description: 'Two juicy beef patties with double cheese.' }
   ],
   Pizza: [
-    { name: 'Margherita', price: '$8.99', description: 'Classic pizza with tomato sauce, mozzarella, and basil.', image: 'https://loremflickr.com/100/100/pizza' },
-    { name: 'Pepperoni', price: '$9.99', description: 'Loaded with pepperoni slices and extra cheese.', image: 'https://loremflickr.com/100/100/pepperoni' },
-    { name: 'Veggie Pizza', price: '$9.49', description: 'Fresh vegetables and mozzarella cheese.', image: 'https://loremflickr.com/100/100/veggiepizza' },
-    { name: 'BBQ Chicken', price: '$10.99', description: 'BBQ sauce, chicken pieces, and cheese.', image: 'https://loremflickr.com/100/100/bbqpizza' }
+    { name: 'Margherita', price: '$8.99', description: 'Classic pizza with tomato sauce, mozzarella, and basil.' },
+    { name: 'Pepperoni', price: '$9.99', description: 'Loaded with pepperoni slices and extra cheese.' },
+    { name: 'Veggie Pizza', price: '$9.49', description: 'Fresh vegetables and mozzarella cheese.' },
+    { name: 'BBQ Chicken', price: '$10.99', description: 'BBQ sauce, chicken pieces, and cheese.' }
   ],
   Desserts: [
-    { name: 'Chocolate Cake', price: '$4.99', description: 'Rich chocolate cake with fudge icing.', image: 'https://loremflickr.com/100/100/chocolatecake' },
-    { name: 'Ice Cream', price: '$3.99', description: 'Creamy ice cream in multiple flavors.', image: 'https://loremflickr.com/100/100/icecream' },
-    { name: 'Cheesecake', price: '$5.49', description: 'Classic cheesecake with a buttery crust.', image: 'https://loremflickr.com/100/100/cheesecake' },
-    { name: 'Brownie', price: '$3.49', description: 'Chocolate brownie with nuts.', image: 'https://loremflickr.com/100/100/brownie' }
+    { name: 'Chocolate Cake', price: '$4.99', description: 'Rich chocolate cake with fudge icing.' },
+    { name: 'Ice Cream', price: '$3.99', description: 'Creamy ice cream in multiple flavors.' },
+    { name: 'Cheesecake', price: '$5.49', description: 'Classic cheesecake with a buttery crust.' },
+    { name: 'Brownie', price: '$3.49', description: 'Chocolate brownie with nuts.' }
   ],
   Drinks: [
-    { name: 'Coca Cola', price: '$1.99', description: 'Chilled soft drink.', image: 'https://loremflickr.com/100/100/coke' },
-    { name: 'Orange Juice', price: '$2.49', description: 'Freshly squeezed orange juice.', image: 'https://loremflickr.com/100/100/orangejuice' },
-    { name: 'Lemonade', price: '$1.99', description: 'Refreshing lemonade.', image: 'https://loremflickr.com/100/100/lemonade' },
-    { name: 'Iced Tea', price: '$2.29', description: 'Cold brewed iced tea.', image: 'https://loremflickr.com/100/100/icedtea' }
+    { name: 'Coca Cola', price: '$1.99', description: 'Chilled soft drink.' },
+    { name: 'Orange Juice', price: '$2.49', description: 'Freshly squeezed orange juice.' },
+    { name: 'Lemonade', price: '$1.99', description: 'Refreshing lemonade.' },
+    { name: 'Iced Tea', price: '$2.29', description: 'Cold brewed iced tea.' }
   ],
   Starters: [
-    { name: 'French Fries', price: '$2.99', description: 'Crispy golden fries.', image: 'https://loremflickr.com/100/100/fries' },
-    { name: 'Chicken Wings', price: '$5.99', description: 'Spicy grilled chicken wings.', image: 'https://loremflickr.com/100/100/chickenwings' },
-    { name: 'Spring Rolls', price: '$4.49', description: 'Crispy veggie spring rolls.', image: 'https://loremflickr.com/100/100/springrolls' },
-    { name: 'Garlic Bread', price: '$3.49', description: 'Toasted garlic bread.', image: 'https://loremflickr.com/100/100/garlicbread' }
+    { name: 'French Fries', price: '$2.99', description: 'Crispy golden fries.' },
+    { name: 'Chicken Wings', price: '$5.99', description: 'Spicy grilled chicken wings.' },
+    { name: 'Spring Rolls', price: '$4.49', description: 'Crispy veggie spring rolls.' },
+    { name: 'Garlic Bread', price: '$3.49', description: 'Toasted garlic bread.' }
   ],
   Specials: [
-    { name: 'Chef Special Pasta', price: '$9.99', description: 'Pasta with special chef sauce.', image: 'https://loremflickr.com/100/100/pasta' },
-    { name: 'Seafood Platter', price: '$14.99', description: 'Assorted seafood with dips.', image: 'https://loremflickr.com/100/100/seafood' },
-    { name: 'Steak', price: '$12.99', description: 'Grilled steak cooked to perfection.', image: 'https://loremflickr.com/100/100/steak' },
-    { name: 'Grilled Salmon', price: '$13.99', description: 'Fresh salmon with herbs.', image: 'https://loremflickr.com/100/100/salmon' }
+    { name: 'Chef Special Pasta', price: '$9.99', description: 'Pasta with special chef sauce.' },
+    { name: 'Seafood Platter', price: '$14.99', description: 'Assorted seafood with dips.' },
+    { name: 'Steak', price: '$12.99', description: 'Grilled steak cooked to perfection.' },
+    { name: 'Grilled Salmon', price: '$13.99', description: 'Fresh salmon with herbs.' }
   ],
   Healthy: [
-    { name: 'Caesar Salad', price: '$5.99', description: 'Crispy lettuce with Caesar dressing.', image: 'https://loremflickr.com/100/100/salad' },
-    { name: 'Fruit Bowl', price: '$4.99', description: 'Seasonal fresh fruits.', image: 'https://loremflickr.com/100/100/fruits' },
-    { name: 'Grilled Chicken Salad', price: '$7.49', description: 'Grilled chicken with greens.', image: 'https://loremflickr.com/100/100/chickensalad' },
-    { name: 'Quinoa Bowl', price: '$6.99', description: 'Healthy quinoa with veggies.', image: 'https://loremflickr.com/100/100/quinoa' }
+    { name: 'Caesar Salad', price: '$5.99', description: 'Crispy lettuce with Caesar dressing.' },
+    { name: 'Fruit Bowl', price: '$4.99', description: 'Seasonal fresh fruits.' },
+    { name: 'Grilled Chicken Salad', price: '$7.49', description: 'Grilled chicken with greens.' },
+    { name: 'Quinoa Bowl', price: '$6.99', description: 'Healthy quinoa with veggies.' }
   ],
   Favorites: [
-    { name: 'Burger Combo', price: '$8.99', description: 'Classic burger with fries and drink.', image: 'https://loremflickr.com/100/100/burgercombo' },
-    { name: 'Pizza Combo', price: '$11.99', description: 'Medium pizza with drink.', image: 'https://loremflickr.com/100/100/pizzacombo' },
-    { name: 'Dessert Platter', price: '$9.49', description: 'Assorted desserts for sharing.', image: 'https://loremflickr.com/100/100/dessertplatter' }
+    { name: 'Burger Combo', price: '$8.99', description: 'Classic burger with fries and drink.' },
+    { name: 'Pizza Combo', price: '$11.99', description: 'Medium pizza with drink.' },
+    { name: 'Dessert Platter', price: '$9.49', description: 'Assorted desserts for sharing.' }
   ],
   Combos: [
-    { name: 'Family Combo', price: '$19.99', description: '2 pizzas, 4 drinks, and 1 dessert.', image: 'https://loremflickr.com/100/100/familymeal' },
-    { name: 'Couple Combo', price: '$12.99', description: '1 pizza, 2 drinks, and 1 dessert.', image: 'https://loremflickr.com/100/100/couplemeal' },
-    { name: 'Snack Combo', price: '$7.99', description: 'Fries, nuggets, and soft drink.', image: 'https://loremflickr.com/100/100/snackcombo' }
+    { name: 'Family Combo', price: '$19.99', description: '2 pizzas, 4 drinks, and 1 dessert.' },
+    { name: 'Couple Combo', price: '$12.99', description: '1 pizza, 2 drinks, and 1 dessert.' },
+    { name: 'Snack Combo', price: '$7.99', description: 'Fries, nuggets, and soft drink.' }
   ]
 }
 
@@ -99,15 +99,13 @@ const selectCategory = (category) => activeCategory.value = category
       <div
           v-for="item in menuItems[activeCategory]"
           :key="item.name"
-          class="flex items-start gap-4"
+          class="flex flex-col gap-1"
       >
-        <div class="flex-1">
-          <div class="flex justify-between items-start">
-            <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
-            <p class="text-gray-600 font-medium">{{ item.price }}</p>
-          </div>
-          <p class="text-gray-500 mt-1 line-clamp-2">{{ item.description }}</p>
+        <div class="flex justify-between items-start">
+          <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
+          <p class="text-gray-600 font-medium">{{ item.price }}</p>
         </div>
+        <p class="text-gray-500 mt-1 line-clamp-2">{{ item.description }}</p>
       </div>
     </div>
 
