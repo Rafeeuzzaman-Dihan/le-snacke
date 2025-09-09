@@ -101,7 +101,6 @@ const selectCategory = (category) => activeCategory.value = category
           :key="item.name"
           class="flex items-start gap-4"
       >
-        <img :src="item.image" alt="" class="w-24 h-24 object-cover rounded-full flex-shrink-0">
         <div class="flex-1">
           <div class="flex justify-between items-start">
             <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
