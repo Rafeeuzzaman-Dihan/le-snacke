@@ -8,5 +8,6 @@ import PopularItems from "~/pages/PopularItems.vue";
   <div>
     <hero-section />
     <popular-items />
+    <hero-section />
   </div>
 </template>
