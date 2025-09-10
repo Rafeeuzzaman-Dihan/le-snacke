@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Categories
 const categories = [
   'Burgers',
   'Pizza',
@@ -78,12 +77,14 @@ const selectCategory = (category) => activeCategory.value = category
   <section class="py-12 px-6 max-w-6xl mx-auto">
 
     <!-- Categories -->
-    <div class="flex flex-wrap gap-6 justify-center mb-12 border-b border-gray-200 pb-4">
+    <div
+        class="flex flex-nowrap gap-6 justify-start mb-8 border-b border-gray-200 pb-4 overflow-x-auto scrollbar-hide"
+    >
       <button
           v-for="cat in categories"
           :key="cat"
           @click="selectCategory(cat)"
-          class="relative px-3 py-1 text-[18px] font-800 transition-colors group"
+          class="relative flex-shrink-0 px-2 py-1 md:text-[24px] text-[20px] font-800 transition-colors group"
           :class="activeCategory === cat ? 'text-[#FEF1D8]' : 'text-gray-700 hover:text-[#FEF1D8]'"
       >
         {{ cat }}
@@ -102,8 +103,8 @@ const selectCategory = (category) => activeCategory.value = category
           class="flex flex-col gap-1"
       >
         <div class="flex justify-between items-start">
-          <h3 class="text-lg font-semibold text-[#FEF1D8]">{{ item.name }}</h3>
-          <p class="text-[#FEF1D8] font-medium">{{ item.price }}</p>
+          <h3 class="text-[18px] font-600 text-[#FEF1D8]">{{ item.name }}</h3>
+          <p class="text-[#FEF1D8] text-[18px] font-600">{{ item.price }}</p>
         </div>
         <p class="text-gray-800 mt-1 line-clamp-2">{{ item.description }}</p>
       </div>
