@@ -102,10 +102,10 @@ const selectCategory = (category) => activeCategory.value = category
           class="flex flex-col gap-1"
       >
         <div class="flex justify-between items-start">
-          <h3 class="text-lg font-semibold text-gray-800">{{ item.name }}</h3>
+          <h3 class="text-lg font-semibold text-[#FEF1D8]">{{ item.name }}</h3>
           <p class="text-[#FEF1D8] font-medium">{{ item.price }}</p>
         </div>
-        <p class="text-[#FEF1D8] mt-1 line-clamp-2">{{ item.description }}</p>
+        <p class="text-gray-800 mt-1 line-clamp-2">{{ item.description }}</p>
       </div>
     </div>
 
