@@ -18,15 +18,7 @@
       <p class="hero-subtitle text-lg sm:text-xl md:text-2xl mb-8 opacity-90 animate-fade-up">
         Savor exquisite flavors and unforgettable dining experiences in the heart of culinary delight.
       </p>
-      <NuxtLink
-          to="#menu"
-          class="group inline-block bg-[#0A9987] text-white font-semibold py-3 px-6 rounded-lg relative overflow-hidden"
-      >
-        <span class="relative z-10">Explore Our Menu</span>
-        <span
-            class="absolute inset-0 bg-gradient-to-r from-teal-400 to-teal-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
-        ></span>
-      </NuxtLink>
+      <ExploreMenuBtn />
     </div>
   </section>
 </template>
@@ -74,3 +66,6 @@
   }
 }
 </style>
+<script setup lang="ts">
+import ExploreMenuBtn from "~/components/common/ExploreMenuBtn.vue";
+</script>

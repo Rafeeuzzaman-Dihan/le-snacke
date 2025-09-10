@@ -1,4 +1,6 @@
 <script setup>
+import ExploreMenuBtn from "~/components/common/ExploreMenuBtn.vue";
+
 const aboutText = `
 Le Snacke is a culinary haven where taste meets passion.
 We serve freshly prepared dishes crafted from the finest ingredients,
@@ -26,12 +28,7 @@ From classic comfort foods to unique gourmet creations, our menu has something f
         <p class="text-gray-800 text-lg leading-relaxed mb-6">
           {{ aboutText }}
         </p>
-        <NuxtLink
-            to="#menu"
-            class="inline-block bg-[#0A9987] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-teal-600"
-        >
-          Explore Our Menu
-        </NuxtLink>
+        <ExploreMenuBtn />
       </div>
 
     </div>
