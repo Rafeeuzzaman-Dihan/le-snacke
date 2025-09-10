@@ -1,37 +1,4 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const dishLeft = ref(null);
-const dishRight = ref(null);
-
-onMounted(() => {
-  // Left dish floating
-  gsap.to(dishLeft.value, {
-    x: -30,
-    y: 30,
-    rotation: 10,
-    duration: 5,
-    ease: "sine.inOut",
-    yoyo: true,
-    repeat: -1,
-  });
-
-  // Right dish floating
-  gsap.to(dishRight.value, {
-    x: 30,
-    y: -30,
-    rotation: -10,
-    duration: 5,
-    ease: "sine.inOut",
-    yoyo: true,
-    repeat: -1,
-  });
-});
-
 const items = [
   {
     name: "Cheesy Burger Deluxe",
@@ -58,23 +25,21 @@ const items = [
 </script>
 
 <template>
-  <section id="popular" class="relative py-20 bg-[#FEF1D8] overflow-hidden">
+  <section id="popular" class="relative py-20 bg-[#FEF1D8]">
     <!-- Floating side dishes -->
     <img
-        ref="dishLeft"
         src="https://pngimg.com/uploads/pasta/pasta_PNG46.png"
-        alt="Floating Dish Left"
+        alt="Dish Left"
         class="hidden md:block absolute -left-28 top-1/2 w-64 opacity-70 pointer-events-none"
     />
     <img
-        ref="dishRight"
         src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png"
-        alt="Floating Dish Right"
+        alt="Dish Right"
         class="hidden md:block absolute -right-28 top-1/3 w-64 opacity-70 pointer-events-none"
     />
 
     <!-- Content -->
-    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-[#0A9987] mb-4">
         Our Popular Items
       </h2>
@@ -87,7 +52,7 @@ const items = [
         <div
             v-for="(item, index) in items"
             :key="index"
-            class="bg-white rounded-3xl shadow-lg overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-2xl"
+            class="bg-white rounded-3xl shadow-lg overflow-hidden hover:scale-105 transition-transform"
         >
           <img
               :src="item.image"
@@ -97,9 +62,7 @@ const items = [
           <div class="p-4 text-left">
             <h3 class="text-lg font-semibold text-gray-900 mb-1">{{ item.name }}</h3>
             <p class="text-gray-600 text-sm mb-2">{{ item.description }}</p>
-            <span
-                class="inline-block bg-[#0A9987] text-white px-3 py-1 rounded-full font-semibold"
-            >
+            <span class="inline-block bg-[#0A9987] text-white px-3 py-1 rounded-full font-semibold">
               ${{ item.price }}
             </span>
           </div>
