@@ -1,7 +1,7 @@
 <template>
   <section class="md:py-6 py-6 px-6 max-w-6xl mx-auto">
     <!-- Title & Subheading -->
-    <div class="text-center mb-12">
+    <div class="text-center md:mb-12 mb-6">
       <h1 class="text-[36px] md:text-[40px] font-bold text-[#FEF1D8] mb-2">Visit Us</h1>
       <p class="text-gray-700 text-[16px] md:text-[22px] mx-auto">
         We’d love to welcome you to our restaurant. Find us below or reach out via social media.
