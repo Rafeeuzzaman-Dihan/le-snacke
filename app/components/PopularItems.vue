@@ -25,19 +25,13 @@ const items = [
 </script>
 
 <template>
-  <section id="popular" class="relative py-20 bg-[#FEF1D8]">
-    <!-- Floating side dishes -->
+  <section id="popular" class="relative py-20 bg-[#FEF1D8] overflow-hidden">
+    <!-- Background abstract PNG -->
     <img
-        src="https://pngimg.com/uploads/pasta/pasta_PNG46.png"
-        alt="Dish Left"
-        class="hidden md:block absolute -left-28 top-1/2 w-64 opacity-70 pointer-events-none"
+        src="/images/popItems-bg.png"
+        alt="Abstract Food Background"
+        class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
     />
-    <img
-        src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png"
-        alt="Dish Right"
-        class="hidden md:block absolute -right-28 top-1/3 w-64 opacity-70 pointer-events-none"
-    />
-
     <!-- Content -->
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-[#0A9987] mb-4">
