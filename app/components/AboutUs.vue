@@ -10,8 +10,8 @@ From classic comfort foods to unique gourmet creations, our menu has something f
 </script>
 
 <template>
-  <section id="about" class="py-20 px-6 bg-[#FEF1D8]">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+  <section id="about" class="py-10 md:py-12 px-6 bg-[#FEF1D8]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
 
       <!-- Image -->
       <div class="md:w-1/2">
