@@ -119,4 +119,14 @@ button {
 }
 button span { width: 0; }
 button:hover span { width: 100%; }
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 </style>
