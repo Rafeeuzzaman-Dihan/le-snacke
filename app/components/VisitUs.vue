@@ -9,7 +9,7 @@
     </div>
 
     <!-- Two-column layout -->
-    <div class="grid md:grid-cols-2 gap-12 items-start mb-12">
+    <div class="grid md:grid-cols-2 md:gap-12 gap-6 items-start mb-12">
       <!-- Left side: Contact Info -->
       <div class="space-y-5 text-gray-800">
         <!-- Address -->

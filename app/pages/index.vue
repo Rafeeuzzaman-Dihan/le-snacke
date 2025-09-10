@@ -10,7 +10,7 @@ import VisitUs from "~/components/VisitUs.vue";
   <div>
     <HeroSection />
     <PopularItems />
-    <Menu />
+    <Menu id="menu" />
     <AboutUs />
     <VisitUs />
   </div>
