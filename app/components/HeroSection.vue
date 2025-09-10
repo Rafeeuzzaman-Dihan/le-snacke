@@ -2,7 +2,7 @@
   <section class="hero-section relative h-screen text-white overflow-hidden">
     <!-- Background Image -->
     <img
-        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
+        src="/images/hero1.jpg"
         alt="Hero Background"
         class="absolute inset-0 h-full w-full object-cover animate-zoom-slow"
     />
