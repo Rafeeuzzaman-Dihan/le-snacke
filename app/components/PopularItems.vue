@@ -46,7 +46,7 @@ const items = [
         <div
             v-for="(item, index) in items"
             :key="index"
-            class="bg-white rounded-3xl shadow-lg overflow-hidden hover:scale-105 transition-transform"
+            class="bg-white rounded-3xl shadow-lg overflow-hidden transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl will-change-transform"
         >
           <img
               :src="item.image"
@@ -65,3 +65,10 @@ const items = [
     </div>
   </section>
 </template>
+
+<style scoped>
+.will-change-transform {
+  will-change: transform;
+}
+</style>
+
