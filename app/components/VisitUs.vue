@@ -1,12 +1,9 @@
 <template>
-  <section class="py-16 px-6 max-w-6xl mx-auto">
-    <!-- Top divider line -->
-    <div class="border-t border-gray-300 mb-8"></div>
-
+  <section class="md:py-10 py-6 px-6 max-w-6xl mx-auto">
     <!-- Title & Subheading -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Visit Us</h1>
-      <p class="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-[40px] font-bold text-[#FEF1D8] mb-4">Visit Us</h1>
+      <p class="text-gray-700 text-lg md:text-[24px] mx-auto">
         We’d love to welcome you to our restaurant. Find us below or reach out via social media.
       </p>
     </div>
@@ -48,8 +45,8 @@
     </div>
 
     <!-- Bottom divider line -->
-    <div class="border-t border-gray-300 pt-6 text-center">
-      <p class="text-gray-500 text-sm">© 2025 Le Snacke. All rights reserved.</p>
+    <div class="border-t border-gray-300 pt-4 text-center">
+      <p class="text-[#FEF1D8] text-[14px]">© 2025 Le Snacke. All rights reserved.</p>
     </div>
   </section>
 </template>
