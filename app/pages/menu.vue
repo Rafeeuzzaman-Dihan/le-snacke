@@ -88,7 +88,7 @@ const selectCategory = (category) => activeCategory.value = category
       >
         {{ cat }}
         <span
-            class="absolute left-0 -bottom-1 h-1 bg-[#FEF1D8] transition-all duration-300"
+            class="absolute left-0 -bottom-1 h-0.5 bg-[#FEF1D8] transition-all duration-300"
             :class="activeCategory === cat ? 'w-full' : 'w-0 group-hover:w-full'"
         ></span>
       </button>
