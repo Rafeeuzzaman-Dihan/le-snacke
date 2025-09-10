@@ -1,15 +1,15 @@
 <script setup lang="ts">
-
-import HeroSection from "~/pages/heroSection.vue";
-import PopularItems from "~/pages/PopularItems.vue";
-import Menu from "~/pages/menu.vue";
+import HeroSection from "~/components/HeroSection.vue";
+import PopularItems from "~/components/PopularItems.vue";
+import Menu from "~/components/Menu.vue";
+import AboutUs from "~/components/AboutUs.vue";
 </script>
 
 <template>
   <div>
-    <hero-section />
-    <popular-items />
+    <HeroSection />
+    <PopularItems />
     <Menu />
-    <hero-section />
+    <AboutUs />
   </div>
 </template>
